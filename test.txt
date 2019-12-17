@@ -1,0 +1,28 @@
+POSTMAN------ Api -----POSTMAN
+for user Sign Up
+post:- http://127.0.0.1:8000/api/v1/user/signup
+{
+	"username":"Shashidhar123",
+	"email":"gopavaram@gmail.com",
+	"phonenumber" :"9441058382",
+	"password"  : "shashi",
+	"password2":"shashi",
+	"first_name":"Shashidhar",
+	"last_name":"Reddy"
+}
+
+
+for admin signin
+
+
+post:- http://127.0.0.1:8000/api/v1/admin/signin
+{
+
+	"username":"shashidharreddy082@gmail.com",
+	"password"  : "shashi"
+
+}
+
+
+
+Issues:- Unable to login as user have to check
