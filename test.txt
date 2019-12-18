@@ -1,3 +1,4 @@
+python manage.py migrate --run-syncdb
 POSTMAN------ Api -----POSTMAN
 for user Sign Up
 post:- http://127.0.0.1:8000/api/v1/user/signup
@@ -15,7 +16,7 @@ post:- http://127.0.0.1:8000/api/v1/user/signup
 for admin signin
 
 
-post:- http://127.0.0.1:8000/api/v1/admin/signin
+post:- http://127.0.0.1:8000/api/v1/user/signin  (login as superadmin)
 {
 
 	"username":"shashidharreddy082@gmail.com",
@@ -24,5 +25,10 @@ post:- http://127.0.0.1:8000/api/v1/admin/signin
 }
 
 
+post:- http://127.0.0.1:8000/api/v1/user/signin  (only if user.active = True in django admin)
+{
 
-Issues:- Unable to login as user have to check
+	"username":"shashidharreddy082@gmail.com",
+	"password"  : "shashi"
+
+}
