@@ -1,0 +1,15 @@
+import smtplib
+
+content = 'Example mail stuff here'
+
+mail = smtplib.SMTP('smtp.gmail.com',587)
+
+mail.ehlo()
+
+mail.starttls()
+
+mail.login('developmentshashi@gmail.com','Shashi@123')
+
+print(mail.sendmail('developmentshashi@gmail.com','shashidharreddy082@gmail.com',content))
+
+mail.close()
