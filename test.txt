@@ -32,3 +32,9 @@ post:- http://127.0.0.1:8000/api/v1/user/signin  (only if user.active = True in 
 	"password"  : "shashi"
 
 }
+class verification(models.Model):
+    user= models.ForeignKey(User,default=None, verbose_name="user", on_delete=models.CASCADE)
+    emailverificationcode = models.CharField(max_length=6,default=None)
+    mobileverificationcode = models.CharField(max_length=6,default=None)
+    mobileverified =  models.BooleanField(default=False)
+    emailverified =  models.BooleanField(default=False)
